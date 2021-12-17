@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+	 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+   
+   <style media="screen">
+	#mapid{height: 500px;}
+	img{
+		height: 200px;
+		width: 200px;
+	</style>
+   <meta charset="utf-8">
+   <title>webgis (H1D020067) Pinggang Taruna Andalan</title>
+   </head>
+   <body>
+	<div id="mapid"></div>
+	
+	<script type="text/javascript">
+	var map = L.map('mapid').setView([-7.6696, 109.6599], 12);
+	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1IjoicGluZ2dhbmd0YXJ1bmEiLCJhIjoiY2t4OWx1ZDM4MHgwczJwcnlkNmZlam03OSJ9.NV0wyOSuc2obO7enh_sisg'
+}).addTo(map);
+
+		var marker = L.marker([-7.6729264,109.6587705]).addTo(map).bindPopup('<b>Indomaret Kebumen 1</b><br><center><img src="gambar/indomaret1.jpg" />');
+		var marker = L.marker([-7.6801255,109.6577951]).addTo(map).bindPopup('<b>Indomaret Kebumen 2</b><br><center><img src="gambar/indomaret2.jpg" />');
+		var marker = L.marker([-7.6648862,109.655568]).addTo(map).bindPopup('<b>Indomaret Asrama Polres</b><br><center><img src="gambar/indomaretasrama.jpg" />');
+		var marker = L.marker([-7.6764252,109.6684818]).addTo(map).bindPopup('<b>Indomaret Jl. Tentara Pelajar 1</b><br><center><img src="gambar/indomarettentara1.jpeg" />');
+		var marker = L.marker([-7.6896132,109.6613642]).addTo(map).bindPopup('<b>Indomaret by Rizki Putra</b><br><center><img src="gambar/indomaretrizki.jpg" />');
+		var marker = L.marker([-7.6642685,109.6692546]).addTo(map).bindPopup('<b>Indomaret Kawedusan</b><br><center><img src="gambar/indomaretkawedusan.jpg" />');
+		var marker = L.marker([-7.6681855,109.6484919]).addTo(map).bindPopup('<b>Indomaret Jl.Tentara Pelajar 2</b><br><center><img src="gambar/indomarettentara2.jpg" />');
+		var marker = L.marker([-7.688124,109.6736745]).addTo(map).bindPopup('<b>Indomaret Selang</b><br><center><img src="gambar/indomaretselang.jpg" />');
+		var marker = L.marker([-7.694428,109.6947295]).addTo(map).bindPopup('<b>Indomaret Jl. Kutoarjo Km 5</b><br><center><img src="gambar/indomaretkutoarjo.jpg" />');
+		var marker = L.marker([-7.6600368,109.7047571]).addTo(map).bindPopup('<b>Indomaret Seruni</b><br><center><img src="gambar/indomaretseruni.jpg" />');
+		var marker = L.marker([-7.6996779,109.6626902]).addTo(map).bindPopup('<b>Toko Vio Indomaret</b><br><center><img src="gambar/tokovio.jpg" />');
+		var marker = L.marker([-7.6636819,109.6452121]).addTo(map).bindPopup('<b>Kamsia Kebumen Indomaret Mertokondo</b><br><center><img src="gambar/indomaretmertokondo.jfif" />');
+		var marker = L.marker([-7.7213104,109.734957]).addTo(map).bindPopup('<b>Indomaret Sruweng</b><br><center><img src="gambar/indomaretseruweng.jpg" />');
+	</script>
